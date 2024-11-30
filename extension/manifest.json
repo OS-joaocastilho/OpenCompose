@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "OpenCompose",
+  "version": "0.0.1",
+  "description": "A simple Chrome extension that incorporates any LLM and generates text.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}

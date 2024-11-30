@@ -1,0 +1,260 @@
+:root {
+    --window-bg-color: #1b1d21;
+    --text-color: #f0f0f0;
+    --input-text-color: white;
+    --placeholder-text-color: #757678;
+    --input-bg-color: #232529;
+    --container-bg-color: #232529;
+    --border-color: #444444;
+    --shadow-color: rgba(97, 99, 101, 0.6);
+}
+
+/* WINDOWS */
+.window{
+  box-sizing: content-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 12px;
+  background-color: var(--window-bg-color);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  display: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease;
+  padding: 20px;
+  width: 500px;
+  max-width: 500px;
+  transform: translateX(-50%);
+  border: 2px solid var(--border-color);
+}
+
+.window *{
+  box-sizing: content-box;
+}
+
+/* Make the window visible with smooth fade-in */
+.window.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Settings window style */
+.settings-window {
+  z-index: 1001;
+}
+
+.generation-window {
+  z-index: 1001;
+}
+
+/* Mini window style */
+.mini-window {
+  z-index: 1000;
+}
+
+.grammar-popup {
+  position: absolute;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeButton {
+  color: #aaa !important;
+  background-color: transparent;
+}
+
+.closeButton:hover {
+  color: #ff0000 !important;
+  transform: scale(1.5);
+}
+
+.closeButtonWindow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.closeButtonPopup {
+  font-size: 10px;
+  color: white !important;
+  position: flex;
+  margin-left: 10px;
+  display: none;
+}
+
+/* Settings button styles */
+.settings-button {
+  position: absolute;
+  top: 10px; /* Align with the close button */
+  right: 50px; /* Adjust this value to move it to the left of the close button */
+  display: flex;
+  background-color: transparent !important;
+}
+
+/* Hover effect for the settings button */
+.settings-button:hover {
+  transform: scale(1.5);
+}
+
+.blockButton {
+  border-radius: 8px;
+  color: white !important;
+  font-size: 16px;
+}
+
+.blockButton:hover {
+  transform: scale(1.05);
+}
+
+/* Send Button */
+#sendButton {
+  padding: 17px 24px;
+  position: absolute;
+  background-color: grey !important;
+  color: #ebebe4 !important;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#sendButton:hover {
+  background-color: #218838 !important;
+}
+
+#saveSettingsButton {
+  padding: 10px 24px;
+  background-color: #007bff !important;
+}
+
+#saveSettingsButton:hover {
+  background-color: #0056b3 !important;
+}
+
+.generation-buttons {
+  display: absolute;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.generationButton {
+  padding: 10px 24px;
+}
+
+#insertButton {
+  background-color: #28a745 !important;
+}
+
+/* INPUTS */
+
+.input{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--input-bg-color) !important;
+  color: var(--input-text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.settings-input{
+  width: 70%;
+}
+
+#generateTextBox{
+  width: 100%;
+  max-width: 350px;
+}
+
+/* For WebKit Browsers */
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-text-color) !important;
+}
+
+/* Edge and Firefox */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: var(--placeholder-text-color) !important;
+}
+
+.input-container {
+  align-items: center;
+  width: 95%;
+  background-color: var(--container-bg-color) !important;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+settings-row {
+  float: right;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px; /* Space between the label and input */
+}
+
+.settings-row label {
+  text-align: left;
+  margin-right: 10px;
+  color: var(--text-color) !important;
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--text-color) !important;
+  margin-bottom: 10px;
+}
+
+/* Title styling */
+.settings-window h2 {
+  text-align: center;
+}
+
+/* Description styling */
+.settings-window p.description {
+  font-size: 10px;
+  text-align: center;
+  color: var(--text-color) !important;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#infoMessage {
+  visibility: hidden;
+  font-size: 10px;
+}
+.generation-container {
+  display: none;
+}
+
+.generation-display {
+  height: 200px;
+  max-height: 200px; /* Set the desired height */
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--input-bg-color) !important;
+  color: var(--text-color) !important;
+  margin: 10px 0;
+}
+
+#retryButton #copyButton {
+  background-color: transparent !important;
+}
+
