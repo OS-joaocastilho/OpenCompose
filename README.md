@@ -1,6 +1,6 @@
-# OpenCompose Chrome Extension
+# OpenCompose Chromium Extension
 
-**OpenCompose** is a simple yet powerful Chrome extension designed to enhance productivity by incorporating any language model (LLM) into your browser. It provides a seamless way to generate, insert, and manage text directly within web applications. 
+**OpenCompose** is a simple yet powerful Chromium extension designed to enhance productivity by incorporating any language model (LLM) into your browser. It provides a seamless way to generate, insert, and manage text directly within web applications. 
 
 ---
 
